@@ -38,16 +38,26 @@ module.exports = {
             return element.id === +id
         })
 
-        // console.log(team, index)
         team[index].playerName = playerName
-
 
         res.status(200).send(team)
     },
 
+    // uses findIndex method to loop through and return the object that allows us to edit name
+
     deletePlayer: (req, res) => {
 
+        const { id } = req.params
+
+        const index = team.findIndex(element => {
+            return element.id === +id
+        })
+
+        team.splice(index, 1)
+
+        res.status(200).send(team)
     }
 
+    // uses findIndex to loop through and return the index that we then can slpice to remove the object from the array
 
 }
