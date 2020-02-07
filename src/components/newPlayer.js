@@ -12,10 +12,35 @@ class NewPlayer extends Component {
         }
     }
 
+    handlePlayerName = (event) => {
+        this.setState({ playerName: event.target.value })
+    }
+
+    handlePlayerPosition = (event) => {
+        this.setState({ playerPosition: event.target.value })
+    }
+
+    handleClick = () => {
+        this.props.createPlayer(
+            this.state.playerName,
+            this.state.playerPosition
+        )
+    }
+
+
+
+
+
+
+
     render() {
         return (
             <div>
-                NewPlayer.js
+                <label>Player Name</label>
+                <input onChange={this.handlePlayerName} />
+                <label>Position</label>
+                <input onChange={this.handlePlayerPosition} />
+                <button onClick={this.handleClick}>submit</button>
             </div>
         )
     }

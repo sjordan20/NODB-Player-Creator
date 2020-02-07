@@ -5,6 +5,7 @@ let id = 0
 module.exports = {
 
     getTeam: (req, res) => {
+        // console.log(team)
         res.status(200).send(team)
         // fetches team = [ ] for componentDidMount
     },
@@ -17,12 +18,13 @@ module.exports = {
         player.id = id
         id++
 
+        console.log(req.body)
         team.push({
             playerName: playerName,
             playerPosition: playerPosition,
             id: id
         })
-
+        console.log(team)
         res.status(200).send(team)
 
         //  creates inputs into an object and then pushes them into the team []

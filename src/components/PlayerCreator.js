@@ -4,7 +4,11 @@ import NewPlayer from './newPlayer'
 function PlayerCreator(props) {
 
     return <div>PlayerCreator.js
-        <NewPlayer />
+        <NewPlayer
+            createPlayer={props.createPlayer}
+        />
+
+
     </div>
 
 
