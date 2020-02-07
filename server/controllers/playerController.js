@@ -60,6 +60,6 @@ module.exports = {
         res.status(200).send(team)
     }
 
-    // uses findIndex to loop through and return the index that we then can slpice to remove the object from the array
+    // uses findIndex to loop through and return the index that we then can splice to remove the object from the array
 
 }

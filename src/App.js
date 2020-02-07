@@ -33,14 +33,18 @@ class App extends Component {
       })
     })
 
-    console.log(this.state.team)
 
-
-
+    // playerName and PlayerPosition need to be passed through sense those are the keys being updated
+    // console.log(this.state.team)
 
   }
 
-  editPlayer = () => {
+  editPlayerName = (id, newName) => {
+    axios.put(`/api/players/${id}`, { playerName: newName }).then(res => {
+      this.setState({
+        team: res.data
+      })
+    })
 
   }
 
@@ -54,7 +58,10 @@ class App extends Component {
       <div>
         <Header />
         <PlayerCreator createPlayer={this.createPlayer} />
-        <Court />
+        <Court
+          editPlayerName={this.editPlayerName}
+          team={this.state.team}
+        />
 
       </div>
     )

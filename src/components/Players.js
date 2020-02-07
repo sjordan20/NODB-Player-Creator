@@ -11,7 +11,10 @@ class Players extends Component {
         }
     }
 
-    toggleEdit() {
+    toggleEdit = () => {
+        this.setState({
+            isEditing: !this.state.isEditing
+        })
 
     }
 
@@ -22,8 +25,11 @@ class Players extends Component {
     render() {
         return (
             <div>
-                Players.js
-        </div>
+                {this.props.team.playerName}
+                {this.props.team.playerPosition}
+
+
+            </div>
         )
     }
 

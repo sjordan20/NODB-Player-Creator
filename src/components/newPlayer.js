@@ -27,6 +27,8 @@ class NewPlayer extends Component {
         )
     }
 
+    // createPlayer is passed down in props through app.js --> createPlayer.js 
+
 
 
 
