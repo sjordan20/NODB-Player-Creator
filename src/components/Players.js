@@ -28,13 +28,13 @@ class Players extends Component {
 
     render() {
         return (
-            <div className='player-box'>
+            <div>
 
-                <div className='player'>
+                <div>
                     {this.state.isEditing ? (
                         <div>
-                            <input onChange={this.handChangeName} />
-                            <button
+                            <input className="save-input" onChange={this.handChangeName} />
+                            <button className='save-button'
                                 onClick={() => {
                                     this.props.editPlayerName(this.props.team.id, this.state.editName)
                                     this.toggleEdit()
@@ -44,10 +44,10 @@ class Players extends Component {
                             </button>
                         </div>
                     ) : (
-                            <p onDoubleClick={this.toggleEdit}>{this.props.team.playerName}{":"}{this.props.team.playerPosition} </p>
+                            <p className="player" onDoubleClick={this.toggleEdit}>{this.props.team.playerName}{" : "}{this.props.team.playerPosition} </p>
                         )}
 
-                    <button onClick={() => this.props.deletePlayer(this.props.team.id)}
+                    <button className='release-button' onClick={() => this.props.deletePlayer(this.props.team.id)}
                     >Release</button>
                 </div>
 

@@ -87,14 +87,20 @@
   top: 1px;
 }
 
-.court {
+.background {
   width: 100%;
   height: 100vh;
   background: url(GkvPul.jpg);
   background-position: bottom;
+}
+
+.court {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  flex-direction: column;
+  /* margin-top: 10%; */
 }
 
 .court-title {
@@ -103,4 +109,75 @@
   font-size: 2rem;
   font-weight: 600;
   font-family: "PT Serif Caption", serif;
+}
+
+.player-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 7%;
+}
+
+.player {
+  height: 150px;
+  width: 150px;
+  background-image: url(basketball.png);
+  color: #fdb927;
+  font-weight: 700;
+  font-family: "PT Serif Caption", serif;
+  background-size: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-button {
+  background: linear-gradient(to bottom, #542583 5%, #9266bd 100%);
+  background-color: #542583;
+  border-radius: 21px;
+  border: 2px solid #fdb927;
+  display: inline-block;
+  cursor: pointer;
+  color: #c9c1c9;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 4px 9px;
+  text-decoration: none;
+  text-shadow: 0px 1px 6px #c9c1c9;
+}
+.save-button:hover {
+  background: linear-gradient(to bottom, #9266bd 5%, #542583 100%);
+  background-color: #9266bd;
+}
+.save-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.save-input {
+  background-color: blanchedalmond;
+}
+
+.release-button {
+  background: linear-gradient(to bottom, #542583 5%, #9266bd 100%);
+  background-color: #542583;
+  border-radius: 21px;
+  border: 2px solid #fdb927;
+  display: inline-block;
+  cursor: pointer;
+  color: #c9c1c9;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 2px 3px;
+  text-decoration: none;
+  text-shadow: 0px 1px 6px #c9c1c9;
+}
+.release-button:hover {
+  background: linear-gradient(to bottom, #9266bd 5%, #542583 100%);
+  background-color: #9266bd;
+}
+.release-button:active {
+  position: relative;
+  top: 1px;
 }

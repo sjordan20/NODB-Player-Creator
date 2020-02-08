@@ -24,12 +24,22 @@ function Court(props) {
 
 
     return (
-        <div className='court'>
-            <h2 className="court-title">Court</h2>
+        
+        <div className= "background">
+            <div className='court'>
 
-            <div >
-                {teamList}
+                <h2 className="court-title">Court</h2>
 
+                <div className='player-box'>
+
+                    <div>
+
+                        {teamList}
+                    </div>
+
+
+
+                </div>
             </div>
 
 
