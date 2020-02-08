@@ -11,22 +11,28 @@ function Court(props) {
                 editPlayerName={props.editPlayerName}
                 key={element.id}
                 team={element}
-
+                deletePlayer={props.deletePlayer}
 
             />
         )
     })
 
-    console.log(teamList)
+    // console.log(teamList)
 
 
 
 
 
     return (
-        <div>
-            <h2>Court</h2>
-            {teamList}
+        <div className='court'>
+            <h2 className="court-title">Court</h2>
+
+            <div >
+                {teamList}
+
+            </div>
+
+
         </div>)
 }
 

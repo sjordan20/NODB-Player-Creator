@@ -37,12 +37,21 @@ class NewPlayer extends Component {
 
     render() {
         return (
-            <div>
-                <label>Player Name</label>
-                <input onChange={this.handlePlayerName} />
-                <label>Position</label>
-                <input onChange={this.handlePlayerPosition} />
-                <button onClick={this.handleClick}>submit</button>
+            <div className='new-player'>
+                <div className="input-boxes">
+                    <div className="player-input" >
+                        <label className="label">Player Name</label>
+                        <input className="input" onChange={this.handlePlayerName} />
+                    </div>
+                    <div className="position-input">
+                        <label className="label">Position</label>
+                        <input className="input" onChange={this.handlePlayerPosition} />
+                    </div>
+
+                </div>
+                <div >
+                    <button className="myButton" onClick={this.handleClick}>submit</button>
+                </div>
             </div>
         )
     }

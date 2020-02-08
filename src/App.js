@@ -3,6 +3,8 @@ import Header from './components/Header'
 import PlayerCreator from './components/PlayerCreator';
 import Court from './components/Court'
 import axios from 'axios';
+import './App.css'
+
 
 
 class App extends Component {
@@ -48,7 +50,12 @@ class App extends Component {
 
   }
 
-  deletePlayer = () => {
+  deletePlayer = (id) => {
+    axios.delete(`/api/players/${id}`).then(res => {
+      this.setState({
+        team: res.data
+      })
+    })
 
   }
 
@@ -61,8 +68,8 @@ class App extends Component {
         <Court
           editPlayerName={this.editPlayerName}
           team={this.state.team}
+          deletePlayer={this.deletePlayer}
         />
-
       </div>
     )
   }
