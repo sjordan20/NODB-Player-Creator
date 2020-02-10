@@ -59,7 +59,9 @@ class NewPlayer extends Component {
                 <div className="input-boxes">
                     <div className="player-input" >
                         <label className="label">Player Name</label>
-                        <input className="input" value={this.state.playerName} onChange={this.handlePlayerName} />
+                        <form onSubmit={this.handleSubmit}>
+                            <input className="input" value={this.state.playerName} onChange={this.handlePlayerName} />
+                        </form>
                     </div>
                     <div className="position-input">
                         <label className="label">Position</label>

@@ -47,7 +47,7 @@ class Players extends Component {
                             </button>
                         </div>
                     ) : (
-                            <p className="player" onDoubleClick={this.toggleEdit}>{this.props.team.playerName}{" : "}{this.props.team.playerPosition} </p>
+                            <p className="player" onDoubleClick={this.toggleEdit}>{this.props.team.playerName}{":  "}{this.props.team.playerPosition} </p>
                         )}
 
                     <button className='release-button' onClick={() => this.props.deletePlayer(this.props.team.id)}
