@@ -4,8 +4,6 @@ class NewPlayer extends Component {
     constructor(props) {
         super(props)
 
-
-
         this.state = {
             playerName: '',
             playerPosition: ''
@@ -20,11 +18,32 @@ class NewPlayer extends Component {
         this.setState({ playerPosition: event.target.value })
     }
 
+
+
+    resetInput = () => {
+        this.setState({
+            playerName: '',
+            playerPosition: ''
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.createPlayer(
+            this.state.playerName,
+            this.state.playerPosition,
+        )
+        this.resetInput()
+
+
+    }
+
     handleClick = () => {
         this.props.createPlayer(
             this.state.playerName,
-            this.state.playerPosition
+            this.state.playerPosition,
         )
+        this.resetInput()
     }
 
     // createPlayer is passed down in props through app.js --> createPlayer.js 
@@ -32,25 +51,28 @@ class NewPlayer extends Component {
 
 
 
-
-
-
     render() {
         return (
             <div className='new-player'>
+
+
                 <div className="input-boxes">
                     <div className="player-input" >
                         <label className="label">Player Name</label>
-                        <input className="input" onChange={this.handlePlayerName} />
+                        <input className="input" value={this.state.playerName} onChange={this.handlePlayerName} />
                     </div>
                     <div className="position-input">
                         <label className="label">Position</label>
-                        <input className="input" onChange={this.handlePlayerPosition} />
+
+                        <form onSubmit={this.handleSubmit}>
+
+                            <input className="input" value={this.state.playerPosition} onChange={this.handlePlayerPosition} />
+                        </form>
                     </div>
 
                 </div>
                 <div >
-                    <button className="myButton" onClick={this.handleClick}>submit</button>
+                    <button className="myButton" onClick={this.handleClick}> submit </button>
                 </div>
             </div>
         )

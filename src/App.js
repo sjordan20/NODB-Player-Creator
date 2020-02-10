@@ -33,7 +33,7 @@ class App extends Component {
       this.setState({
         team: res.data
       })
-    })
+    }).catch((error) => console.error(error))
 
 
     // playerName and PlayerPosition need to be passed through sense those are the keys being updated
@@ -46,7 +46,7 @@ class App extends Component {
       this.setState({
         team: res.data
       })
-    })
+    }).catch((error) => console.error(error))
 
   }
 

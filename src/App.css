@@ -92,6 +92,7 @@
   height: 100vh;
   background: url(GkvPul.jpg);
   background-position: bottom;
+  background-size: cover;
 }
 
 .court {

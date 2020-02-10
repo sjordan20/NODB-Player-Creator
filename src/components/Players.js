@@ -26,6 +26,7 @@ class Players extends Component {
     }
 
 
+
     render() {
         return (
             <div>
@@ -33,7 +34,9 @@ class Players extends Component {
                 <div>
                     {this.state.isEditing ? (
                         <div>
+
                             <input className="save-input" onChange={this.handChangeName} />
+
                             <button className='save-button'
                                 onClick={() => {
                                     this.props.editPlayerName(this.props.team.id, this.state.editName)
